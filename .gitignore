@@ -17,4 +17,5 @@ host.json
 /tools/NuGet.exe
 /src
 /test
+/SharedReferences/*.xml
 *.pdb
