@@ -1,7 +1,7 @@
 #r "Newtonsoft.Json"
-#r "..\Shared\Logic.Abstraction.dll"
-#r "..\Shared\Infrastructure.dll"
-#r "..\Shared\Microsoft.ApplicationInsights.dll"
+#r "..\SharedReferences\Logic.Abstraction.dll"
+#r "..\SharedReferences\Infrastructure.dll"
+#r "..\SharedReferences\Microsoft.ApplicationInsights.dll"
 
 using System;
 using Newtonsoft.Json;
