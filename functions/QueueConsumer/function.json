@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "message",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "renaultdemo",
+      "connection": "AzureWebJobsServiceBus",
+      "accessRights": "Manage"
+    },
+    {
+        "type": "blob",
+        "name": "result",
+        "direction": "out",
+        "path": "samples-output-csharp/{Id}"
+    }
+  ],
+  "disabled": false
+}
