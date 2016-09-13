@@ -9,6 +9,7 @@ Publish
 *.suo
 *.cscfg
 *.Cache
+host.json
 
 /packages
 /TestResults
@@ -16,4 +17,4 @@ Publish
 /tools/NuGet.exe
 /src
 /test
-/SharedReferences/*.pdb
+*.pdb

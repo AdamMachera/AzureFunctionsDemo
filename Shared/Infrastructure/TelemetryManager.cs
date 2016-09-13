@@ -11,7 +11,12 @@ namespace Infrastructure
     {
         private static Lazy<Microsoft.ApplicationInsights.TelemetryClient> tc = new Lazy<Microsoft.ApplicationInsights.TelemetryClient>(() =>
         {
-            Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey = ConfigurationManager.AppSettings["InstrumentationKey"];
+            string key = ConfigurationManager.AppSettings["InstrumentationKey"];
+            if (string.IsNullOrEmpty(key))
+            {
+                key = System.Environment.GetEnvironmentVariable("InstrumentationKey", EnvironmentVariableTarget.User);
+            }
+            Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey = key;
             return new Microsoft.ApplicationInsights.TelemetryClient();
         });
 
